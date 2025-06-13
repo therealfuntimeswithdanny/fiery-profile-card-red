@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Bio = () => {
@@ -47,7 +46,6 @@ const Bio = () => {
                 <i className="fas fa-user text-4xl md:text-5xl text-white opacity-60"></i>
               </div>
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-bio-red rounded-full border-4 border-black animate-pulse-red"></div>
           </div>
 
           {/* Name and Title */}
