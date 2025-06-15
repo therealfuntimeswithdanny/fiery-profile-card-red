@@ -1,4 +1,6 @@
+
 import React from 'react';
+import Skills from './Skills';
 
 const Bio = () => {
   const socialLinks = [
@@ -68,6 +70,9 @@ const Bio = () => {
             <span>Let's Connect</span>
           </div>
         </div>
+
+        {/* Skills Section */}
+        <Skills />
 
         {/* Social Links */}
         <div className="border-t border-gray-800 pt-8">
