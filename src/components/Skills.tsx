@@ -1,13 +1,12 @@
 
 import React from 'react';
-import { Progress } from "@/components/ui/progress";
 
 const skills = [
-  { name: 'React', level: 90 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Tailwind CSS', level: 95 },
-  { name: 'Node.js', level: 75 },
-  { name: 'UI/UX Design', level: 80 },
+  { name: 'React', icon: 'fab fa-react' },
+  { name: 'TypeScript', icon: 'fas fa-code' },
+  { name: 'Tailwind CSS', icon: 'fas fa-palette' },
+  { name: 'Node.js', icon: 'fab fa-node-js' },
+  { name: 'UI/UX Design', icon: 'fas fa-drafting-compass' },
 ];
 
 const Skills = () => {
@@ -16,14 +15,17 @@ const Skills = () => {
       <h3 className="text-center text-gray-400 font-semibold mb-8 text-lg">
         My Skills
       </h3>
-      <div className="max-w-xl mx-auto space-y-6">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-xl mx-auto">
         {skills.map((skill, index) => (
-          <div key={index} className="w-full">
-            <div className="flex justify-between mb-1">
-              <span className="text-base font-medium text-white">{skill.name}</span>
-              <span className="text-sm font-medium text-gray-400">{skill.level}%</span>
-            </div>
-            <Progress value={skill.level} className="h-2 bg-gray-800 [&>div]:bg-bio-red" />
+          <div
+            key={index}
+            className="group flex flex-col items-center justify-center p-4 rounded-lg bg-gray-900 hover:bg-bio-red transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-default h-28"
+            aria-label={skill.name}
+          >
+            <i className={`${skill.icon} text-3xl text-gray-400 group-hover:text-white transition-colors duration-300 mb-2`}></i>
+            <span className="text-sm text-center text-gray-300 group-hover:text-white transition-colors duration-300">
+              {skill.name}
+            </span>
           </div>
         ))}
       </div>
